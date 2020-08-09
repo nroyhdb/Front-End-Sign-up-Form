@@ -40,16 +40,15 @@ function addErrorTo(field, message){
     formControl.classList.add('error');
     const small = formControl.querySelector('small');
     small.innerText = message;
-    small.style.opacity='1';
+   
 }
 
 function removeErrorFrom(field){
     const formControl = form[field].parentNode;
     formControl.classList.add('error');
-    const small = formControl.querySelector('small');
-    small.style.opacity= '0';
+   
 }
 function isValid(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var re =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
