@@ -45,7 +45,7 @@ function addErrorTo(field, message){
 
 function removeErrorFrom(field){
     const formControl = form[field].parentNode;
-    formControl.classList.add('error');
+    formControl.classList.remove('error');
    
 }
 function isValid(email) {
