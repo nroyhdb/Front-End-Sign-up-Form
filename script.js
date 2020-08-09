@@ -21,7 +21,7 @@ form.addEventListener('submit', e=>{
 
     if(email === ''){
         addErrorTo('email','Email is required');
-    } else if(isValid(email)){
+    } else if(!isValid(email)){
         addErrorTo('email','looks like this is not an email');
     } else{
         removeErrorFrom('email');
